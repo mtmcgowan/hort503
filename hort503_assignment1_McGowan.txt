@@ -1,0 +1,235 @@
+Hort 503
+Assignment: 1, Intro to the command line (Windows version)
+Name: Matthew McGowan
+
+'pwd' outputs the path to the current directory
+Example:
+PS C:\Users\mmcgowan> pwd
+
+Path
+----
+C:\Users\mmcgowan
+
+'mkdir' creates a directory with a provided name
+Example:
+PS C:\Users\mmcgowan> mkdir example_dir
+
+
+    Directory: C:\Users\mmcgowan
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        1/11/2018   9:27 AM                example_dir
+
+'cd' navigates to the specified directory
+Example:
+PS C:\Users\mmcgowan> cd example_dir
+PS C:\Users\mmcgowan\example_dir> cd ..
+
+'ls' lists all files and folders present in the current directory
+Example:
+
+PS C:\Users\mmcgowan> ls
+
+
+    Directory: C:\Users\mmcgowan
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----         1/9/2018  11:26 AM                .atom
+d-----         4/6/2016   6:44 PM                .cisco
+d-----        8/27/2017   2:02 PM                .dnx
+d-----        9/29/2016   9:55 AM                .oracle_jre_usage
+d-----         7/3/2017   4:06 PM                .ssh
+d-----         4/6/2017  11:05 AM                .swc
+d-----        2/17/2017   4:17 PM                ansel
+d-r---         1/9/2018  12:44 PM                Contacts
+d-----        12/8/2016   9:15 AM                CytoscapeConfiguration
+d-r---         1/9/2018  12:44 PM                Desktop
+d-r---         1/9/2018  12:44 PM                Documents
+d-r---         1/9/2018  12:44 PM                Downloads
+d-r---         1/9/2018   3:49 PM                Dropbox
+d-----        1/11/2018   9:27 AM                example_dir
+d-r---         1/9/2018  12:44 PM                Favorites
+d-----        8/31/2017   2:37 PM                gBLUP_test
+d-----        3/10/2016   1:49 PM                igv
+d-r---         1/9/2018  12:44 PM                Links
+d-r---         1/9/2018  12:44 PM                Music
+d-r---        12/7/2017   1:56 PM                OneDrive
+d-r---         1/9/2018  12:44 PM                Pictures
+d-----       11/18/2015   9:38 AM                Roaming
+d-r---         1/9/2018  12:44 PM                Saved Games
+d-r---         1/9/2018  12:44 PM                Searches
+d-----        2/17/2017   8:55 PM                Tracing
+d-r---        1/10/2018   1:40 PM                Videos
+-a----         4/6/2017  11:05 AM            307 .bash_profile
+-a----         7/3/2017   4:08 PM            100 .gitconfig
+-a----        8/31/2017   2:22 PM           1657 gBLUP_test.log
+-a----         4/6/2017  11:05 AM           1432 nano.rc
+
+'rmdir' removes an empty directory with the specified name
+Example:
+PS C:\Users\mmcgowan> rmdir example_dir
+PS C:\Users\mmcgowan> ls
+
+
+    Directory: C:\Users\mmcgowan
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----         1/9/2018  11:26 AM                .atom
+d-----         4/6/2016   6:44 PM                .cisco
+d-----        8/27/2017   2:02 PM                .dnx
+d-----        9/29/2016   9:55 AM                .oracle_jre_usage
+d-----         7/3/2017   4:06 PM                .ssh
+d-----         4/6/2017  11:05 AM                .swc
+d-----        2/17/2017   4:17 PM                ansel
+d-r---         1/9/2018  12:44 PM                Contacts
+d-----        12/8/2016   9:15 AM                CytoscapeConfiguration
+d-r---         1/9/2018  12:44 PM                Desktop
+d-r---         1/9/2018  12:44 PM                Documents
+d-r---         1/9/2018  12:44 PM                Downloads
+d-r---         1/9/2018   3:49 PM                Dropbox
+d-r---         1/9/2018  12:44 PM                Favorites
+d-----        8/31/2017   2:37 PM                gBLUP_test
+d-----        3/10/2016   1:49 PM                igv
+d-r---         1/9/2018  12:44 PM                Links
+d-r---         1/9/2018  12:44 PM                Music
+d-r---        12/7/2017   1:56 PM                OneDrive
+d-r---         1/9/2018  12:44 PM                Pictures
+d-----       11/18/2015   9:38 AM                Roaming
+d-r---         1/9/2018  12:44 PM                Saved Games
+d-r---         1/9/2018  12:44 PM                Searches
+d-----        2/17/2017   8:55 PM                Tracing
+d-r---        1/10/2018   1:40 PM                Videos
+-a----         4/6/2017  11:05 AM            307 .bash_profile
+-a----         7/3/2017   4:08 PM            100 .gitconfig
+-a----        8/31/2017   2:22 PM           1657 gBLUP_test.log
+
+'pushd' saves the current location and navigates to a new location
+'popd' returns to the saved location
+Example
+PS C:\Users\mmcgowan> pushd ../../..
+PS C:\> ls
+
+
+    Directory: C:\
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----         4/9/2016   3:17 PM                cygwin64
+d-----       11/18/2015   9:48 AM                eSupport
+d-----        9/22/2016   9:12 AM                Logs
+d-----        3/18/2017   2:03 PM                PerfLogs
+d-r---        12/4/2017   9:32 AM                Program Files
+d-r---        12/4/2017   9:34 AM                Program Files (x86)
+da----         4/8/2016   4:04 PM                TDM-GCC-64
+d-r---        8/21/2017  11:00 AM                Users
+d-----         1/9/2018  11:51 AM                Windows
+
+
+PS C:\> popd
+PS C:\Users\mmcgowan>
+
+'New-Item' makes a new empty file
+Example:
+PS C:\Users\mmcgowan> New-Item example_file.txt -type file
+
+
+    Directory: C:\Users\mmcgowan
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        1/11/2018   9:35 AM              0 example_file.txt
+
+'cp' copies a file from one location to another
+Example:
+PS C:\Users\mmcgowan> cp example_file.txt example_file_copy.txt
+PS C:\Users\mmcgowan> ls
+
+
+    Directory: C:\Users\mmcgowan
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        1/11/2018   9:35 AM              0 example_file.txt
+-a----        1/11/2018   9:35 AM              0 example_file_copy.txt
+
+'mv' moves a file from one location to another
+Example:
+PS C:\Users\mmcgowan> mkdir sample_dir
+
+
+    Directory: C:\Users\mmcgowan
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+d-----        1/11/2018   9:38 AM                sample_dir
+
+
+PS C:\Users\mmcgowan> mv example_file.txt sample_dir
+PS C:\Users\mmcgowan> cd sample_dir
+PS C:\Users\mmcgowan\sample_dir> ls
+
+
+    Directory: C:\Users\mmcgowan\sample_dir
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        1/11/2018   9:35 AM              0 example_file.txt
+
+'more' displays the text present in a file
+Example:
+PS C:\Users\mmcgowan\sample_dir> more example_file.txt
+This is example text.
+How much wood...
+Could a woodchuck chuck....
+If a woodchuck...
+Could chuck....
+wood.
+
+'cat' prints the text present in a file to a stream. If not piped, this is the standard output.
+Example:
+PS C:\Users\mmcgowan\sample_dir> cat example_file.txt > example_file2.txt
+PS C:\Users\mmcgowan\sample_dir> ls
+
+
+    Directory: C:\Users\mmcgowan\sample_dir
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        1/11/2018   9:41 AM            111 example_file.txt
+-a----        1/11/2018   9:44 AM            228 example_file2.txt
+
+
+PS C:\Users\mmcgowan\sample_dir> cat example_file2.txt
+This is example text.
+How much wood...
+Could a woodchuck chuck....
+If a woodchuck...
+Could chuck....
+wood.
+
+'rm' deletes a file
+Example:
+PS C:\Users\mmcgowan\sample_dir> ls
+
+
+    Directory: C:\Users\mmcgowan\sample_dir
+
+
+Mode                LastWriteTime         Length Name
+----                -------------         ------ ----
+-a----        1/11/2018   9:41 AM            111 example_file.txt
+-a----        1/11/2018   9:44 AM            228 example_file2.txt
+PS C:\Users\mmcgowan\sample_dir> rm example_file*
+PS C:\Users\mmcgowan\sample_dir> ls
