@@ -23,6 +23,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assignment4.py" />
+    <Compile Include="es37.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="ex34.py">
       <SubType>Code</SubType>
     </Compile>
@@ -30,6 +33,30 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ex35.sd4.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ex36.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ex38.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ex39.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ex40.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ex41.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ex42.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ex43.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ex44.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
