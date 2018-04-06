@@ -98,19 +98,19 @@ class gen_pos:
                 char_val = self.reads[i]
                 qual_val = self.base_quals[i]
                 
-                if ((char_val == "." or char_val == ",") and qual_val >30):
+                if ((char_val == "." or char_val == ",") and qual_val >=30):
                     read_ct += 1
                     ref_ct += 1
-                elif ((char_val == "a" or char_val == "A") and qual_val >30):
+                elif ((char_val == "a" or char_val == "A") and qual_val >=30):
                     read_ct += 1
                     a_ct += 1
-                elif ((char_val == "t" or char_val == "T") and qual_val >30):
+                elif ((char_val == "t" or char_val == "T") and qual_val >=30):
                     read_ct += 1
                     t_ct += 1
-                elif ((char_val == "c" or char_val == "C") and qual_val >30):
+                elif ((char_val == "c" or char_val == "C") and qual_val >=30):
                     read_ct += 1
                     c_ct += 1
-                elif ((char_val == "g" or char_val == "G") and qual_val >30):
+                elif ((char_val == "g" or char_val == "G") and qual_val >=30):
                     read_ct += 1
                     g_ct += 1
             
