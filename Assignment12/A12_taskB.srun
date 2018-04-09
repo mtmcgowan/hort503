@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH --partition=hort503-01-s18  ### Partition (like a queue in PBS)
+#SBATCH --account=hort503-01-s18    ### Account
+#SBATCH --job-name=McG_A12_taskB    ### Job Name
+#SBATCH --output=A12_taskB.out      ### File in which to store job output
+#SBATCH --error=A12_taskB.err       ### File in which to store job error messages
+#SBATCH --time=0-00:01:00           ### Wall clock time limit in Days-HH:MM:SS
+#SBATCH --nodes=1                   ### Node count required for the job
+#SBATCH --ntasks-per-node=1         ### Nuber of tasks to be launched per Node
+
+sample_ids=$(cat SRA_ids.txt)
+
+for line in $sample_ids
+do
+	if [ -d $line ]
+	then
+		echo "Directory already exists"
+	else
+		mkdir $line
+	fi	
+	echo $line
+done
+
